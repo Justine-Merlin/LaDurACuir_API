@@ -25,7 +25,7 @@ router.post("/register", async (req, res) => {
 router.post("/login", async (req, res) => {
     try {
         //find the user
-        const user = await User.findOne({ username: req.body.username });
+        const user = await User.findOne({ username: req.body.email });
         if (!user) {
             res.status(401).json("Wrong credentials");
         }
