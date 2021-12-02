@@ -8,7 +8,7 @@ const productRoute = require("./routes/product");
 const orderRoute = require("./routes/order");
 
 // require to access .env file
-dotenv.config();
+const { parsed: config } = dotenv.config();
 
 const port = process.env.PORT || 5000;
 
